@@ -1,0 +1,37 @@
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Python virtual environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Output files (except google_qr.png)
+outputs/*
+!outputs/google_test.png
+
+# Pipenv
+Pipfile.lock
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Log files
+*.log
+qr_generator.log
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/ 

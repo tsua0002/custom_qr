@@ -1,0 +1,8 @@
+{
+    "link": "https://example.com",
+    "design": "google",
+    "output": "my_google_qr.png",
+    "title": "My Company",
+    "subtitle": "Visit Us",
+    "footer": "TEAM <3"
+} 

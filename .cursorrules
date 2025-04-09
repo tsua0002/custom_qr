@@ -1,0 +1,74 @@
+# Custom QR Code Generator - Cursor Rules
+# This file provides context for AI assistants working with this repository
+
+# Repository Overview
+# This is a Python-based QR code generator that creates customizable QR codes with different design styles.
+# The project follows a modular, object-oriented design with a clean command-line interface.
+
+# Key Files
+main.py: Main entry point for the application. Contains the QRCodeGenerator class and command-line argument parsing.
+qr_generator.py: Core implementation with base QRGenerator class and design-specific subclasses (Google, Multicolored, Custom).
+README.md: Comprehensive documentation with installation, usage examples, and project structure.
+requirements.txt: Python dependencies for pip installation.
+Pipfile: Dependencies for pipenv installation.
+sample_config.json: Example configuration file for QR code generation.
+
+# Project Structure
+# The repository follows this structure:
+# - main.py: Entry point
+# - qr_generator.py: Core implementation
+# - outputs/: Directory for generated QR codes
+# - fonts/: Required fonts for text rendering
+# - README.md: Documentation
+# - requirements.txt: Dependencies for pip
+# - Pipfile: Dependencies for pipenv
+# - sample_config.json: Example configuration
+
+# Design Patterns
+# - Template Method Pattern: Base QRGenerator class defines the interface, subclasses implement specific designs
+# - Factory Pattern: QRCodeGenerator class creates appropriate generator based on design parameter
+# - Strategy Pattern: Different QR code designs are implemented as separate strategies
+
+# Key Classes
+QRGenerator: Base class for QR code generators with common functionality.
+GoogleQRGenerator: Implements Google-style QR code with colored rectangles.
+MulticoloredQRGenerator: Implements multicolored QR code with colored rectangles.
+CustomQRGenerator: Implements custom QR code with gradient background and rounded corners.
+QRCodeGenerator: Main class that provides a clean interface for generating QR codes.
+
+# Development Guidelines
+# - All QR code generators should inherit from QRGenerator and implement the generate() method
+# - Font handling should use the _get_font() method with fallback options
+# - Output files should be saved in the outputs/ directory
+# - Error handling should use the logging module for consistent output
+# - Configuration should be loaded from JSON files when possible
+
+# Command-Line Usage
+# python main.py --url="https://example.com" --design="google" --title="Title" --subtitle="Subtitle" --footer="Footer"
+# python main.py --config="sample_config.json"
+
+# Configuration Format
+# {
+#     "url": "https://example.com",
+#     "design": "google",
+#     "output": "my_qr.png",
+#     "title": "My Title",
+#     "subtitle": "My Subtitle",
+#     "footer": "My Footer"
+# }
+
+# Testing
+# Test the generator with different designs and parameters to ensure proper functionality.
+# Example: python main.py --url="https://www.google.com" --design="google" --title="Google" --subtitle="Search" --footer="TEAM <3"
+
+# Dependencies
+# - qrcode: For QR code generation
+# - Pillow: For image manipulation
+# - argparse: For command-line argument parsing
+# - json: For configuration file handling
+# - logging: For error handling and logging
+
+# Virtual Environment
+# The project uses pipenv for dependency management.
+# Always activate the virtual environment before running commands:
+# pipenv shell 
